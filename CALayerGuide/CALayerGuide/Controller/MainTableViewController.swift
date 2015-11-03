@@ -48,6 +48,6 @@ class MainTableViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         let identifier = tables[indexPath.row].0
-//        self.performSegueWithIdentifier(identifier, sender: nil)
+        self.performSegueWithIdentifier(identifier, sender: nil)
     }
 }

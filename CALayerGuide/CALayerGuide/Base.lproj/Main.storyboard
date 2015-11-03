@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FTc-to-j0I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FTc-to-j0I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
@@ -11,6 +11,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lOR-dI-EcV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainTableCell" textLabel="Gna-LC-JY1" detailTextLabel="LR4-yu-sZO" imageView="4cU-uB-PCd" style="IBUITableViewCellStyleSubtitle" id="3KK-Bj-tr7">
@@ -23,6 +24,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gna-LC-JY1">
                                             <rect key="frame" x="73" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -30,6 +32,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LR4-yu-sZO">
                                             <rect key="frame" x="73" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -37,9 +40,12 @@
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="CALayer" id="4cU-uB-PCd">
                                             <rect key="frame" x="15" y="0.0" width="43" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
                                         </imageView>
                                     </subviews>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -48,10 +54,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="K7X-CK-S8F"/>
+                    <connections>
+                        <segue destination="ybl-0T-QrZ" kind="show" identifier="CALayer" id="7a0-BH-wWo"/>
+                        <segue destination="DMN-eB-Orz" kind="show" identifier="CAScrollLayer" id="Bm8-aD-wUs"/>
+                        <segue destination="fhZ-do-jfH" kind="show" identifier="CATextLayer" id="sU8-G5-P5q"/>
+                        <segue destination="6Mj-t6-RXn" kind="show" identifier="AVPlayerLayer" id="rPM-WI-QTY"/>
+                        <segue destination="LYQ-dR-WCq" kind="show" identifier="CAGradientLayer" id="CGA-Cl-o1c"/>
+                        <segue destination="m42-oe-o10" kind="show" identifier="CAReplicatorLayer" id="IRe-a4-F0V"/>
+                        <segue destination="d6V-JQ-POv" kind="show" identifier="CATiledLayer" id="Dhk-6P-grH"/>
+                        <segue destination="ORd-iS-mDg" kind="show" identifier="CAShapeLayer" id="V6K-pF-PAC"/>
+                        <segue destination="wSF-3k-xTQ" kind="show" identifier="CAEAGLLayer" id="0vK-Vs-kel"/>
+                        <segue destination="v77-6j-KQ8" kind="show" identifier="CATransformLayer" id="mQh-p7-DIT"/>
+                        <segue destination="yga-Rn-Vmn" kind="show" identifier="CAEmitterLayer" id="AaX-Ym-M73"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ma8-mH-SpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="221"/>
+            <point key="canvasLocation" x="354" y="-85"/>
         </scene>
         <!--Scroll Layer Controller-->
         <scene sceneID="5RJ-jB-l6U">
@@ -64,12 +83,165 @@
                     <view key="view" contentMode="scaleToFill" id="VHx-6q-JKc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1u-YH-gIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="902"/>
+            <point key="canvasLocation" x="-626" y="717"/>
+        </scene>
+        <!--Text Layer-->
+        <scene sceneID="afi-E6-7Ds">
+            <objects>
+                <viewController id="fhZ-do-jfH" customClass="CATextLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="56F-db-CA2"/>
+                        <viewControllerLayoutGuide type="bottom" id="XWN-Bz-f11"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbc-pq-ZNa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFJ-5P-lov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="717"/>
+        </scene>
+        <!--Shape Layer-->
+        <scene sceneID="XYg-C9-rXH">
+            <objects>
+                <viewController id="ORd-iS-mDg" customClass="CAShapeLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rUB-pr-OAh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ug6-6v-Q9e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="klL-j3-TD8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZA8-S9-T7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-600" y="1406"/>
+        </scene>
+        <!--Layer-->
+        <scene sceneID="GRM-7B-4Cq">
+            <objects>
+                <viewController id="wSF-3k-xTQ" customClass="CAEAGLLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k9L-R9-tY7"/>
+                        <viewControllerLayoutGuide type="bottom" id="NI3-us-7mi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQg-IO-K7a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z25-l1-Pzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="1406"/>
+        </scene>
+        <!--Player Layer-->
+        <scene sceneID="3BD-HE-Tw6">
+            <objects>
+                <viewController id="6Mj-t6-RXn" customClass="AVPlayerLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F3e-CR-yRf"/>
+                        <viewControllerLayoutGuide type="bottom" id="lEc-5p-DvC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kft-S0-eWg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TR9-mh-i8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="717"/>
+        </scene>
+        <!--Transform Layer-->
+        <scene sceneID="qKY-uu-5Tc">
+            <objects>
+                <viewController id="v77-6j-KQ8" customClass="CATransformLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fzB-sv-gtX"/>
+                        <viewControllerLayoutGuide type="bottom" id="7n4-VZ-XNC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Klg-kN-k3X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUg-zE-hFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="1406"/>
+        </scene>
+        <!--Emitter Layer-->
+        <scene sceneID="2dn-H3-Mek">
+            <objects>
+                <viewController id="yga-Rn-Vmn" customClass="CAEmitterLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GU1-r1-m1H"/>
+                        <viewControllerLayoutGuide type="bottom" id="evM-cO-qrS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8PE-jK-HFq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ms-EA-Zee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="1406"/>
+        </scene>
+        <!--Replicator Layer-->
+        <scene sceneID="JWz-Dn-caM">
+            <objects>
+                <viewController id="m42-oe-o10" customClass="CAReplicatorLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oLt-PW-InP"/>
+                        <viewControllerLayoutGuide type="bottom" id="xqb-d7-QZW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jUQ-Kc-4FZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yuc-sm-0GT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="717"/>
+        </scene>
+        <!--Gradient Layer-->
+        <scene sceneID="wsW-Bd-NLz">
+            <objects>
+                <viewController id="LYQ-dR-WCq" customClass="CAGradientLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V25-Nv-XVd"/>
+                        <viewControllerLayoutGuide type="bottom" id="lKF-G2-ELk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KDX-Y1-AUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vY2-G3-6Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="717"/>
         </scene>
         <!--Layer Controller-->
         <scene sceneID="nP9-hs-nYd">
@@ -82,12 +254,32 @@
                     <view key="view" contentMode="scaleToFill" id="srf-is-oWQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Y3-fq-2te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="221"/>
+            <point key="canvasLocation" x="-1258" y="717"/>
+        </scene>
+        <!--Tiled Layer-->
+        <scene sceneID="Fed-Wn-FvT">
+            <objects>
+                <viewController id="d6V-JQ-POv" customClass="CATiledLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ohh-cw-ANj"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQq-kh-Eg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ofH-ay-Vhb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hr-gJ-v90" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1258" y="1406"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HbU-aD-eLy">
@@ -97,6 +289,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c2n-50-5IA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -105,7 +298,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKx-pj-NcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="221"/>
+            <point key="canvasLocation" x="-498" y="-85"/>
         </scene>
     </scenes>
     <resources>

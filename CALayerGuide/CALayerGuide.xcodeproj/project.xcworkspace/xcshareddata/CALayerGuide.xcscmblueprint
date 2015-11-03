@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A310D6E263AFCBB1C6AD1BEA6091B0A0E1B7BB4A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A310D6E263AFCBB1C6AD1BEA6091B0A0E1B7BB4A" : 0,
+    "EBCE5C9FA1F4681FCF67B24B425A2052E8CCD811" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3E07DDF8-1ADC-4FD2-80D0-2913986BCFA6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A310D6E263AFCBB1C6AD1BEA6091B0A0E1B7BB4A" : "CALayer-guide\/",
+    "EBCE5C9FA1F4681FCF67B24B425A2052E8CCD811" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CALayerGuide",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CALayerGuide\/CALayerGuide.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dulingkang\/CALayer-guide.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A310D6E263AFCBB1C6AD1BEA6091B0A0E1B7BB4A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dulingkang\/shawndu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EBCE5C9FA1F4681FCF67B24B425A2052E8CCD811"
+    }
+  ]
+}
