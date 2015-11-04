@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A63FE701BE88BD10019F616 /* CATextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63FE6F1BE88BD10019F616 /* CATextLayer.swift */; };
+		3A63FE701BE88BD10019F616 /* CATextLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63FE6F1BE88BD10019F616 /* CATextLayerViewController.swift */; };
 		3A63FE721BE88BE10019F616 /* AVPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63FE711BE88BE10019F616 /* AVPlayerLayer.swift */; };
 		3A63FE741BE88BEF0019F616 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63FE731BE88BEF0019F616 /* CAGradientLayer.swift */; };
 		3A63FE761BE88BFC0019F616 /* CAReplicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63FE751BE88BFC0019F616 /* CAReplicatorLayer.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A63FE6F1BE88BD10019F616 /* CATextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayer.swift; sourceTree = "<group>"; };
+		3A63FE6F1BE88BD10019F616 /* CATextLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerViewController.swift; sourceTree = "<group>"; };
 		3A63FE711BE88BE10019F616 /* AVPlayerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerLayer.swift; sourceTree = "<group>"; };
 		3A63FE731BE88BEF0019F616 /* CAGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		3A63FE751BE88BFC0019F616 /* CAReplicatorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayer.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				3AEF8E9A1BDCC57D00F987D5 /* MainTableViewController.swift */,
 				3AEF8E9C1BDCC59800F987D5 /* CALayerController.swift */,
 				3AEF8E9E1BDCC85D00F987D5 /* CAScrollLayer.swift */,
-				3A63FE6F1BE88BD10019F616 /* CATextLayer.swift */,
+				3A63FE6F1BE88BD10019F616 /* CATextLayerViewController.swift */,
 				3A63FE711BE88BE10019F616 /* AVPlayerLayer.swift */,
 				3A63FE731BE88BEF0019F616 /* CAGradientLayer.swift */,
 				3A63FE751BE88BFC0019F616 /* CAReplicatorLayer.swift */,
@@ -188,7 +188,7 @@
 				3A63FE871BE8D5610019F616 /* CALayerControlsViewController.swift in Sources */,
 				3AEF8E9B1BDCC57D00F987D5 /* MainTableViewController.swift in Sources */,
 				3A63FE7A1BE88C190019F616 /* CAShapeLayer.swift in Sources */,
-				3A63FE701BE88BD10019F616 /* CATextLayer.swift in Sources */,
+				3A63FE701BE88BD10019F616 /* CATextLayerViewController.swift in Sources */,
 				3A63FE801BE88C390019F616 /* CAEmitterLayer.swift in Sources */,
 				3AEF8E9F1BDCC85D00F987D5 /* CAScrollLayer.swift in Sources */,
 				3AA98CA91BDA55AD0019E4BD /* AppDelegate.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FTc-to-j0I">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main Table View Controller-->
@@ -26,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LR4-yu-sZO">
@@ -34,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="CALayer" id="4cU-uB-PCd">
@@ -80,21 +81,107 @@
                         <viewControllerLayoutGuide type="top" id="yKh-jw-dbO"/>
                         <viewControllerLayoutGuide type="bottom" id="bQF-LF-byV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VHx-6q-JKc">
+                    <view key="view" contentMode="scaleToFill" id="1ad-QB-mtN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ACh-9J-OVV">
+                                <rect key="frame" x="175" y="132" width="250" height="336"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9n-cJ-xvQ" customClass="ScrollingView" customModule="CALayerGuide" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cresentEarthRisesAboveLunarHorizon" translatesAutoresizingMaskIntoConstraints="NO" id="RdY-m3-z1Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="0rE-zd-U10"/>
+                                            <constraint firstAttribute="height" constant="250" id="Apb-qj-8J1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ku7-9H-hd9" appends="YES" id="2f6-WX-lee"/>
+                                        </connections>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-CI-st4">
+                                        <rect key="frame" x="23" y="266" width="204" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-AS-bbs">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG4-tR-F72">
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8us-ij-LL6">
+                                                        <rect key="frame" x="155" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="scrollingSwitchChanged:" destination="DMN-eB-Orz" eventType="valueChanged" id="ShL-Va-o2p"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JB5-GW-Atm">
+                                                <rect key="frame" x="20" y="39" width="184" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical scrolling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-AA-h4j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-nz-t23">
+                                                        <rect key="frame" x="135" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="scrollingSwitchChanged:" destination="DMN-eB-Orz" eventType="valueChanged" id="kcE-Jd-jzX"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ACh-9J-OVV" firstAttribute="centerY" secondItem="1ad-QB-mtN" secondAttribute="centerY" priority="750" id="08e-YT-u6j"/>
+                            <constraint firstItem="ACh-9J-OVV" firstAttribute="centerX" secondItem="1ad-QB-mtN" secondAttribute="centerX" id="vfy-Vj-v4b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="horizontalScrollingSwitch" destination="8us-ij-LL6" id="65A-Vk-biU"/>
+                        <outlet property="scrollingView" destination="Z9n-cJ-xvQ" id="Dvy-Du-yBy"/>
+                        <outlet property="verticalScrollingSwitch" destination="rCF-nz-t23" id="sN5-kC-7Db"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1u-YH-gIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ku7-9H-hd9">
+                    <connections>
+                        <action selector="panRecognized:" destination="DMN-eB-Orz" id="TDs-84-q0b"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-626" y="717"/>
         </scene>
-        <!--Text Layer-->
+        <!--Text Layer View Controller-->
         <scene sceneID="afi-E6-7Ds">
             <objects>
-                <viewController id="fhZ-do-jfH" customClass="CATextLayer" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fhZ-do-jfH" customClass="CATextLayerViewController" customModule="CALayerGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="56F-db-CA2"/>
                         <viewControllerLayoutGuide type="bottom" id="XWN-Bz-f11"/>
@@ -102,9 +189,148 @@
                     <view key="view" contentMode="scaleToFill" id="bbc-pq-ZNa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-aq-bKu">
+                                <rect key="frame" x="30" y="64" width="540" height="520"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-rj-pxN">
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="373"/>
+                                        <animations/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wck-tp-u04">
+                                        <rect key="frame" x="0.0" y="381" width="540" height="139"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NDY-cy-FOs">
+                                                <rect key="frame" x="0.0" y="0.0" width="540" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DCM-mb-7Ev">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="28"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7nG-Na-k0T">
+                                                        <rect key="frame" x="43" y="0.0" width="497" height="29"/>
+                                                        <animations/>
+                                                        <segments>
+                                                            <segment title="Helvetica"/>
+                                                            <segment title="Noteworthy Light"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="fontSegmentedControlChanged:" destination="fhZ-do-jfH" eventType="valueChanged" id="Eyw-tl-jvc"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <animations/>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jiR-qe-8Nu">
+                                                <rect key="frame" x="0.0" y="36" width="540" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gda-8a-HJD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.97254901959999995" green="0.37647058820000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="MEf-6o-gna">
+                                                        <rect key="frame" x="48" y="0.0" width="355" height="32"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="fontSizeSliderChanged:" destination="fhZ-do-jfH" eventType="touchUpInside" id="Mny-t5-GMg"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrap text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-DU-9H0">
+                                                        <rect key="frame" x="409" y="0.0" width="74" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Wn-5e-mbB">
+                                                        <rect key="frame" x="491" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="wrapTextSwitchChanged:" destination="fhZ-do-jfH" eventType="valueChanged" id="58i-an-ohI"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gOA-zb-CjL">
+                                                <rect key="frame" x="0.0" y="75" width="540" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alignment mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tsv-P2-rul">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="28"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jX4-ET-iIf">
+                                                        <rect key="frame" x="134" y="0.0" width="406" height="29"/>
+                                                        <animations/>
+                                                        <segments>
+                                                            <segment title="" image="align_left"/>
+                                                            <segment title="" image="align_center"/>
+                                                            <segment title="" image="align_just"/>
+                                                            <segment title="" image="align_right"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <animations/>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1dm-ux-d25">
+                                                <rect key="frame" x="0.0" y="111" width="540" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truncation mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l6M-Kf-IUk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="28"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="YAX-qf-qEX">
+                                                        <rect key="frame" x="138" y="0.0" width="402" height="29"/>
+                                                        <animations/>
+                                                        <segments>
+                                                            <segment title="Start"/>
+                                                            <segment title="Middle"/>
+                                                            <segment title="End"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="truncationModeSegmentedControlChanged:" destination="fhZ-do-jfH" eventType="valueChanged" id="HDy-0G-vtF"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <animations/>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                        <variation key="heightClass=compact" distribution="equalSpacing"/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" alignment="center" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="J4a-aq-bKu" secondAttribute="bottom" constant="16" id="1KK-BV-dlv"/>
+                            <constraint firstItem="J4a-aq-bKu" firstAttribute="leading" secondItem="bbc-pq-ZNa" secondAttribute="leadingMargin" constant="10" id="2iX-lO-HQy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J4a-aq-bKu" secondAttribute="trailing" constant="10" id="N7h-No-GR3"/>
+                            <constraint firstItem="J4a-aq-bKu" firstAttribute="top" secondItem="bbc-pq-ZNa" secondAttribute="topMargin" constant="64" id="qdW-Lk-A3I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="alignmentModeSegmentedControl" destination="jX4-ET-iIf" id="Y4j-Ae-A8U"/>
+                        <outlet property="fontSizeSlider" destination="MEf-6o-gna" id="SZn-Zs-Npv"/>
+                        <outlet property="fontSizeSliderValueLabel" destination="Gda-8a-HJD" id="Wjf-hy-ekk"/>
+                        <outlet property="truncationModeSegmentedControl" destination="YAX-qf-qEX" id="wu8-BV-Ih1"/>
+                        <outlet property="viewForTextLayer" destination="Eyt-rj-pxN" id="q9y-Or-xUO"/>
+                        <outlet property="wrapTextSwitch" destination="6Wn-5e-mbB" id="VUY-8O-Jpi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFJ-5P-lov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -409,8 +635,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="olT-dK-kyP"/>
                                                     <exclude reference="28D-zY-XtU"/>
+                                                    <exclude reference="olT-dK-kyP"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1105,6 +1331,10 @@
         <scene sceneID="7MO-ab-TKF">
             <objects>
                 <viewController id="kPI-4M-kz9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VyT-Mn-vfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="MtE-ng-fMJ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HUI-d6-S0F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1118,5 +1348,10 @@
     </scenes>
     <resources>
         <image name="CALayer" width="60" height="60"/>
+        <image name="align_center" width="60" height="60"/>
+        <image name="align_just" width="60" height="60"/>
+        <image name="align_left" width="60" height="60"/>
+        <image name="align_right" width="60" height="60"/>
+        <image name="cresentEarthRisesAboveLunarHorizon" width="1280" height="1280"/>
     </resources>
 </document>
